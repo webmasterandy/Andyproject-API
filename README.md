@@ -32,3 +32,35 @@ data = response.json()
 print("Title:", data["title"])
 print("URL:", data["url"])
 ```
+# Drachenlord API
+Dieser API-Endpunkt ist für deutsche Entwickler. Dieser Endpunkt gibt zufällige Drachenlord Zitate aus, zusammen mit einer seiner Spitznamen xD.
+<br><br>
+<b>Endpoint:<b>
+  <br>
+`https://api.andyproject.de/drache`
+<br><br>
+<b>Parameters:</b>
+<br>
+- No parameter 
+<br>
+<b>Response:</b><br>
+
+```
+{
+"author":"Kotmidas",
+"data":"Also im Prinzip will ich Dich hier jetzt live fragen… ob Du mich heiraten willst."
+}
+```
+<br>
+<b>Example:</b><br>
+  
+```
+import requests
+
+response = requests.get("https://api.andyproject.de/drache/")
+data = response.json()
+
+print("Author:", data["author"])
+print("Data:", data["data"])
+```
+# NFSW API
