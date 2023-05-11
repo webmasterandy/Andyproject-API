@@ -11,10 +11,24 @@ This API outputs a random meme from the subreddits <a href="https://www.reddit.c
 <br><br>
 <b>Parameter:</b>
 - `?no-gif` → Show only Memes with extensions: jpg, jpeg, png
-<br><br>
+<br>
 <b>Response:<b>
   
 ```
-  {"title":"I want to be excused from the dinner table help me\u2026",
-  "url":"https:\/\/i.redd.it\/x3aiybfvz7za1.jpg"}
-´´´
+  {
+  "title":"I want to be excused from the dinner table help me\u2026",
+  "url":"https:\/\/i.redd.it\/x3aiybfvz7za1.jpg"
+  }
+``` 
+<br>
+<b>Example:<b>
+  
+```
+import requests
+
+response = requests.get("https://api.andyproject.de/memes/")
+data = response.json()
+
+print("Title:", data["title"])
+print("URL:", data["url"])
+```
