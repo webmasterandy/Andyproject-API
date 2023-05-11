@@ -13,8 +13,8 @@ This API outputs a random meme from the subreddits <a href="https://www.reddit.c
 - `?no-gif` → Show only Memes with extensions: jpg, jpeg, png
 <br><br>
 <b>Response:<b>
-<br>
+  
 ```
   {"title":"I want to be excused from the dinner table help me\u2026",
   "url":"https:\/\/i.redd.it\/x3aiybfvz7za1.jpg"}
-```
+´´´
