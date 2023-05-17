@@ -64,3 +64,12 @@ print("Author:", data["author"])
 print("Data:", data["data"])
 ```
 # NFSW API
+This API outputs random NFSW content from various Reddit platforms.
+<br><br>
+<b>Source of API Content</b>
+  - `https://www.reddit.com/r/harrypotterporn/`
+  - `https://www.reddit.com/r/PadmeNFSW/`
+  - `https://www.reddit.com/r/NFSW_Cuties/`
+  - `https://www.reddit.com/r/LegalTeens/`
+  - `https://www.reddit.com/r/Nudes/`
+  - `https://www.reddit.com/r/nsfw/`
