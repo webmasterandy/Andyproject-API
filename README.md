@@ -75,10 +75,8 @@ This API outputs random NFSW content from various Reddit platforms. <br>
   - `https://www.reddit.com/r/Nudes/`
   - `https://www.reddit.com/r/nsfw/`
 <br>
-<b>Endpoint:</b>
+Endpoint: `https://api.andyproject.de/nfsw`
 <br><br>
-
-`https://api.andyproject.de/nfsw` <br><br>
 <b>Parameters:</b><br><br>
 - `?padme` → NFSW Content of Padme Admidala <br>
 - `?nudes` → Nudes <br>
@@ -95,8 +93,18 @@ If you use only „https://api.andyproject.de/nfsw“ you will see nfws content 
 <br>
 Please use the API conscientiously. Thanks
 <br><br>
-<b>Example:</b>
+<b>Response:</b><br>
+
+```
+{
+"title":"Can Vader handle all this?",
+"url":"https:\/\/i.redd.it\/g93dl3ytxaza1.jpg",
+"warning":"Attention! content. These resources are from Reddit. I, as the operator of the API, assume no liability for illegal content."
+}
+```
 <br>
+<b>Example:</b><br>
+
 ```
 import requests
 
@@ -114,3 +122,37 @@ print("Titel: " + data["title"])
 print("URL des Bildes: " + data["url"])
 print("Warnung: " + data["warning"])
 ```
+# Me in real
+This API outputs „Me in real“ memes from Reddit.
+<br><br>
+Endpoint: `https://api.andyproject.de/meirl/`
+<br>
+Parameters: `None`
+<br><br>
+<b>Response:</b><br>
+
+```
+{
+"title":"Meirl",
+"url":"https:\/\/i.redd.it\/iz7t3g9lgg0b1.jpg"
+}
+```
+<b>Example:</b><br>
+
+```
+import requests
+
+# API-URL
+url = "https://api.andyproject.de/meirl/"
+
+# GET-Anfrage an die API senden
+response = requests.get(url)
+
+# JSON-Daten aus der Antwort extrahieren
+data = response.json()
+
+# Titel und URL aus den JSON-Daten ausgeben
+print("Title: " + data["title"])
+print("URL: " + data["url"])
+```
+# Quote API
