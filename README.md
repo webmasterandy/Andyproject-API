@@ -215,3 +215,122 @@ Note: There are no parameters or options for this URL.
 "extension":"png"
 }} 
 ```
+# Weather API
+This endpoint spits out current weather information. Unlike before, you have to specify headers and not parameters in the URL, as I usually like to do.<br>
+Endpoint: `https://api.andyproject.de/v1/weather/`
+<br>
+Headers: ```headers = {
+    "X-CITY": city,
+    "X-STATE_CODE": state_code,  
+    "X-COUNTRY_CODE": country_code
+}```
+
+Response:
+```
+{
+  "coord": {
+    "lon": 10.0007,
+    "lat": 53.5503
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "Ein paar Wolken",
+      "icon": "02d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 15.35,
+    "feels_like": 15.19,
+    "temp_min": 14.33,
+    "temp_max": 17.16,
+    "pressure": 1012,
+    "humidity": 86
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1.54,
+    "deg": 230
+  },
+  "clouds": {
+    "all": 20
+  },
+  "dt": 1688496623,
+  "sys": {
+    "type": 1,
+    "id": 1263,
+    "country": "DE",
+    "sunrise": 1688439426,
+    "sunset": 1688500273
+  },
+  "timezone": 7200,
+  "id": 2911298,
+  "name": "Hamburg",
+  "cod": 200
+}
+```
+
+Example in Python:<br>
+```
+import requests
+
+def get_weather_information(city, state_code, country_code):
+    endpoint = "https://api.andyproject.de/v1/weather/"
+    headers = {
+        "X-CITY": city,
+        "X-STATE_CODE": state_code,
+        "X-COUNTRY_CODE": country_code
+    }
+    
+    response = requests.get(endpoint, headers=headers)
+    data = response.json()
+    
+    # Koordinaten
+    lon = data['coord']['lon']
+    lat = data['coord']['lat']
+    print(f"Koordinaten: Längengrad {lon}, Breitengrad {lat}")
+    
+    # Wetterbeschreibung
+    weather_description = data['weather'][0]['description']
+    print(f"Wetter: {weather_description}")
+    
+    # Temperatur
+    temperature = data['main']['temp']
+    print(f"Temperatur: {temperature}°C")
+    
+    # Luftfeuchtigkeit
+    humidity = data['main']['humidity']
+    print(f"Luftfeuchtigkeit: {humidity}%")
+    
+    # Windgeschwindigkeit
+    wind_speed = data['wind']['speed']
+    print(f"Windgeschwindigkeit: {wind_speed} m/s")
+    
+    # Wolkenbedeckung
+    cloudiness = data['clouds']['all']
+    print(f"Wolkenbedeckung: {cloudiness}%")
+    
+    # Sichtbarkeit
+    visibility = data['visibility']
+    print(f"Sichtbarkeit: {visibility} m")
+    
+    # Zeitzone
+    timezone = data['timezone']
+    print(f"Zeitzone: GMT{timezone / 3600}")
+    
+    # Stadtname
+    city_name = data['name']
+    print(f"Stadt: {city_name}")
+
+    #Variable befüllen
+    stadt=input("Stadt: ")
+    bnd=input("Bundeslandcode: ")
+    land=input("Ländercode: ")
+    # Beispielaufruf
+get_weather_information(stadt, bnd, land)
+
+```
+
+Have fun developing your application. Please note that this API can not be used for commercial purposes, because this API is not vulnerable. It is a hobby project.
