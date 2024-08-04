@@ -1,33 +1,33 @@
-# API-Dokumentation
+# API Documentation
 
 ## Endpoint: `https://api.andyproject.de/ping/`
 
-Dieser Endpoint führt eine Ping-Anfrage, CPU-, RAM- und Netzwerk-Auslastungsmessungen durch und gibt die Ergebnisse in JSON-Format zurück.
+This endpoint performs a ping request, measures CPU, RAM, and network usage, and returns the results in JSON format.
 
-### HTTP Methode
+### HTTP Method
 
 `GET`
 
-### Antwort
+### Response
 
-Die Antwort ist ein JSON-Objekt mit den folgenden Feldern:
+The response is a JSON object with the following fields:
 
-- `ping`: Die durchschnittliche Round-Trip-Zeit (RTT) des Ping in Millisekunden.
-- `cpu_usage`: Die CPU-Auslastung.
-- `ram_usage`: Die RAM-Auslastung in Prozent.
-- `download_usage`: Der Netzwerk-Download-Verbrauch in Kilobyte pro Sekunde.
-- `upload_usage`: Der Netzwerk-Upload-Verbrauch in Kilobyte pro Sekunde.
+- `ping`: The average round-trip time (RTT) of the ping in milliseconds.
+- `cpu_usage`: The CPU usage.
+- `ram_usage`: The RAM usage in percent.
+- `download_usage`: The network download consumption in kilobytes per second.
+- `upload_usage`: The network upload consumption in kilobytes per second.
 
-### Beispiel
+### Example
 
-#### Anfrage
+#### Request
 
 ```http
 GET /ping/ HTTP/1.1
 Host: api.andyproject.de
 ```
 
-#### Antwort
+#### Response
 
 ```json
 {
@@ -39,7 +39,7 @@ Host: api.andyproject.de
 }
 ```
 
-### Beispiel-Python-Skript zur Verwendung des Endpoints
+### Example Python Script for Using the Endpoint
 
 ```python
 import requests
@@ -55,7 +55,7 @@ if response.status_code == 200:
     print("Download Usage (KB/s):", data['download_usage'])
     print("Upload Usage (KB/s):", data['upload_usage'])
 else:
-    print("Fehler bei der Anfrage:", response.status_code)
+    print("Request failed with status code:", response.status_code)
 ```
 
-Dieses Skript sendet eine GET-Anfrage an den Endpoint und gibt die Ergebnisse in der Konsole aus.
+This script sends a GET request to the endpoint and prints the results to the console.
