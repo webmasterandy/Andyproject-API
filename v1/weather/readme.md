@@ -79,6 +79,3 @@ The API returns appropriate error messages in the following scenarios:
     "error": "No weather data found."
   }
   ```
-
-## Note
-Ensure that you have the correct headers set with valid location information to get the desired weather data. For more detailed information, please visit the [GitHub repository](https://github.com/webmasterandy/Andyproject-API/tree/main/v1/weather).
