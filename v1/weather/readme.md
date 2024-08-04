@@ -70,7 +70,7 @@ The API returns appropriate error messages in the following scenarios:
   ```json
   {
     "error": "No location data found.",
-    "info": "Please visit https://github.com/webmasterandy/Andyproject-API#weather-api for more information."
+    "info": "Please visit https://github.com/webmasterandy/Andyproject-API/tree/main/v1/weather for more information."
   }
   ```
 - **No weather data found:**
@@ -81,4 +81,4 @@ The API returns appropriate error messages in the following scenarios:
   ```
 
 ## Note
-Ensure that you have the correct headers set with valid location information to get the desired weather data. For more detailed information, please visit the [GitHub repository](https://github.com/webmasterandy/Andyproject-API#weather-api).
+Ensure that you have the correct headers set with valid location information to get the desired weather data. For more detailed information, please visit the [GitHub repository](https://github.com/webmasterandy/Andyproject-API/tree/main/v1/weather).
