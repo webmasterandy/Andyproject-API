@@ -5,15 +5,15 @@ Welcome to the AndyProject API documentation. Below you will find a list of avai
 ## API Endpoints
 
 ### Memes
-- **Endpoint**: [`/v1/memes`](https://api.andyproject.de/v1/memes)
+- **Endpoint**: [`/v1/memes`](https://api.andyproject.de/v1/fun/memes)
 - **Description**: Returns a list of memes.
 
 ### Drache
-- **Endpoint**: [`/v1/drache`](https://api.andyproject.de/v1/drache)
+- **Endpoint**: [`/v1/drache`](https://api.andyproject.de/v1/fun/drache)
 - **Description**: Returns information about the dragon.
 
 ### Me IRL Memes
-- **Endpoint**: [`/v1/meirl`](https://api.andyproject.de/v1/meirl)
+- **Endpoint**: [`/v1/meirl`](https://api.andyproject.de/v1/fun/meirl)
 - **Description**: Returns a list of "Me IRL" memes.
 
 ### German Quotes
@@ -29,5 +29,5 @@ Welcome to the AndyProject API documentation. Below you will find a list of avai
 - **Description**: Returns a list of Russian quotes.
 
 ### Ping Tool
-- **Endpoint**: [`/v1/ping`](https://api.andyproject.de/v1/ping)
+- **Endpoint**: [`/v1/ping`](https://api.andyproject.de/v1/tools/ping)
 - **Description**: Performs a ping test and returns the result.
