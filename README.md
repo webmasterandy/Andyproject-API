@@ -16,6 +16,14 @@ Welcome to the AndyProject API documentation. Below you will find a list of avai
 - **Endpoint**: [`/v1/fun/meirl`](https://api.andyproject.de/v1/fun/meirl)
 - **Description**: This endpoint returns a list of "Me IRL" memes, which are memes that people feel represent their real-life experiences.
 
+### Cat Pictures
+- **Endpoint**: [`/v1/tools/cat`](https://api.andyproject.de/v1/fun/cat)
+- **Description**: This endpoint provides random cat pictures. Very cute and sweet.
+
+### Dog Pictures
+- **Endpoint**: [`/v1/tools/dog`](https://api.andyproject.de/v1/fun/dog)
+- **Description**: This endpoint provides random dog pictures. Very cute and sweet but not like cats :)
+
 ### German Quotes
 - **Endpoint**: [`/v1/quotes/de`](https://api.andyproject.de/v1/quotes/de)
 - **Description**: This endpoint returns a list of German quotes. It can be used to fetch inspirational or famous quotes in the German language.
@@ -35,3 +43,5 @@ Welcome to the AndyProject API documentation. Below you will find a list of avai
 ### My IP
 - **Endpoint**: [`/v1/tools/myip`](https://api.andyproject.de/v1/tools/myip)
 - **Description**: This endpoint returns information about the client's IP address. It includes details such as IPv4, IPv6, hostname, and location information (city and country).
+
+
